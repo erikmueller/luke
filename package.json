@@ -13,7 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2",
+    "react-router": "^4.2.0",
     "react-stdio": "chvanikoff/react-stdio#update_deps"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.0"
   }
 }

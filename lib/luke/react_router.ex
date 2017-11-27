@@ -5,14 +5,16 @@ defmodule Luke.ReactRouter do
   plug :dispatch
 
   match _ do
+    location = case conn.query_string do
+      "" -> conn.request_path
+      query_string -> conn.request_path <> "?" <> query_string
+    end
+
     %{"html" => html} = StdJsonIo.json_call!(
       %{
         "component" => "priv/main.js",
         "props" => %{
-            "message" => "rendering...",
-            "method" => conn.method ,
-            "path" => conn.request_path,
-            "query" => conn.query_string,
+          "location" => location
         }
       }
     )
