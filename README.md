@@ -1,21 +1,17 @@
 # Luke
 
-**TODO: Add description**
+> The `react`ing `Cowboy`
 
-## Installation
+This project is solely for fun and learning.
+It uses a supervised cowboy plug adapter and creates a __very__ simplistic router.
+All API calls are forwarded to the `ApiRouter` while the `ReactRouter` uses `react-stdio` with `std_json_io` to render react elements through a little `nodejs` process.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `luke` to your list of dependencies in `mix.exs`:
+# Running
 
-```elixir
-def deps do
-  [
-    {:luke, "~> 0.1.0"}
-  ]
-end
-```
+Make sure to run `mix deps.get` and `npm i` before running `iex -S mis` to start the application
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/luke](https://hexdocs.pm/luke).
+# Resources
 
+* [react-stdio](https://github.com/mjackson/react-stdio) by Micheal Jackson
+* [std_json_io fork](https://github.com/chvanikoff/std_json_io/tree/refactoring) by Roman (chvanikoff) You should also read his awesome medium post about [refactoring this module](https://medium.com/@chvanikoff/lets-refactor-std-json-io-e444b6f2c580)
+* Overstuffed Gorilla(s) blog post about [Rendering React with phoenix](http://blog.overstuffedgorilla.com/render-react-with-phoenix/)
