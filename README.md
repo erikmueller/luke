@@ -12,6 +12,6 @@ Make sure to run `mix deps.get` and `npm i` before running `iex -S mis` to start
 
 # Resources
 
-* [react-stdio](https://github.com/mjackson/react-stdio) by Micheal Jackson
+* [react-stdio](https://github.com/mjackson/react-stdio) by Michael Jackson
 * [std_json_io fork](https://github.com/chvanikoff/std_json_io/tree/refactoring) by Roman (chvanikoff) You should also read his awesome medium post about [refactoring this module](https://medium.com/@chvanikoff/lets-refactor-std-json-io-e444b6f2c580)
 * Overstuffed Gorilla(s) blog post about [Rendering React with phoenix](http://blog.overstuffedgorilla.com/render-react-with-phoenix/)
