@@ -1,13 +1,14 @@
 defmodule Luke.ReactRouter do
   use Plug.Router
+  alias Luke.Render
 
   plug :match
   plug :dispatch
 
-  match _ do
+  get "*_path" do
     location = case conn.query_string do
       "" -> conn.request_path
-      query_string -> conn.request_path <> "?" <> query_string
+      qs -> conn.request_path <> "?" <> qs
     end
 
     %{"html" => html} = StdJsonIo.json_call!(
@@ -19,6 +20,6 @@ defmodule Luke.ReactRouter do
       }
     )
 
-    conn |> send_resp(200, html)
+    conn |> send_resp(200, Render.index(html))
   end
 end

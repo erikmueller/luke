@@ -1,11 +1,20 @@
 defmodule Luke.Router do
   use Plug.Router
 
-  plug Plug.Logger, log: :debug
-
+  plug Plug.Static,
+    at: "/static",
+    from: "priv/static",
+    gzip: true,
+    brotli: true
+  plug Plug.Logger,
+    log: :debug
   plug :match
   plug :dispatch
 
   forward "/api", to: Luke.ApiRouter
   forward "/", to: Luke.ReactRouter
+
+  match _ do
+    conn |> send_resp(404, "Not found")
+  end
 end
