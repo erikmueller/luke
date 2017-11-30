@@ -11,7 +11,7 @@ defmodule Luke.ReactRouter do
       qs -> conn.request_path <> "?" <> qs
     end
 
-    %{"html" => html} = StdJsonIo.json_call!(
+    %{"html" => html, "context" => %{"status" => status}} = StdJsonIo.json_call!(
       %{
         "component" => "priv/main.js",
         "props" => %{
@@ -20,6 +20,6 @@ defmodule Luke.ReactRouter do
       }
     )
 
-    conn |> send_resp(200, Render.index(html))
+    conn |> send_resp(status || 200, Render.index(html))
   end
 end

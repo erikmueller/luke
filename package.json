@@ -13,8 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-router": "^4.2.0",
-    "react-stdio": "chvanikoff/react-stdio#update_deps"
+    "react-stdio": "erikmueller/react-stdio#feature/additional-context"
   },
   "devDependencies": {
     "eslint": "^4.12.0"

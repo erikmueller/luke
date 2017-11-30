@@ -1,21 +1,26 @@
-module.exports = ({ location }) => {
-  const { createElement: h } = require('react/cjs/react.production.min')
-  const { StaticRouter, Route } = require('react-router')
+const context = { status: 200 }
 
-  const Home = () => h('h1', null, '127.0.0.1, sweet 127.0.0.1')
+const Router = function({ location }) {
+  const { createElement: h } = require('react/cjs/react.production.min')
+  const { StaticRouter, Route, Switch } = require('react-router')
+
   const A = () => h('h2', null, 'This is A')
   const B = () => h('h2', null, 'This is B')
-
-  const context = {}
+  const NotFound = () => {
+    context.status = 404
+    return h('h2', null, 'Soory, we took a wrong turn.')
+  }
 
   return h(
     StaticRouter,
     { location, context },
-    h('div', null, [
-      h(Route, { path: '/', component: Home }, null),
-      h('hr'),
+    h(Switch, null, [
       h(Route, { path: '/a', component: A }, null),
       h(Route, { path: '/b', component: B }, null),
+      h(Route, { render: NotFound }),
     ])
   )
 }
+
+Router.context = context
+module.exports = Router
