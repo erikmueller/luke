@@ -13,7 +13,7 @@ defmodule Luke.ReactRouter do
 
     %{"html" => html, "context" => %{"status" => status}} = StdJsonIo.json_call!(
       %{
-        "component" => "priv/main.js",
+        "component" => "priv/react-router.js",
         "props" => %{
           "location" => location
         }
