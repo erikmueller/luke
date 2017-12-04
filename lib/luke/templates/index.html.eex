@@ -3,6 +3,8 @@
     <title>Foo</title>
 </head>
 <body>
-    <%= html %>
+    <div id="app"><%= html %></div>
+    <script src="static/vendor.bundle.js"></script>
+    <script src="static/app.bundle.js"></script>
 </body>
 </html>
