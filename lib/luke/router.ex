@@ -4,7 +4,6 @@ defmodule Luke.Router do
   plug Plug.Static,
     at: "/static",
     from: "priv/static",
-    gzip: true,
     brotli: true
   plug Plug.Logger,
     log: :debug

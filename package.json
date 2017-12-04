@@ -8,18 +8,19 @@
     "test": "test"
   },
   "scripts": {
-    "start": "webpack -w",
-    "build": "webpack",
+    "start": "rm -rf priv/static/*.br; webpack -w",
+    "build": "NODE_ENV=production webpack",
+    "postbuild": "ls priv/static/*.js | xargs -I{} brotli \"{}\" -Zfo \"{}.br\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-stdio": "erikmueller/react-stdio#feature/additional-context"
+    "react-stdio": "erikmueller/react-stdio"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

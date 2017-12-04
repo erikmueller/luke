@@ -1,8 +1,11 @@
 <html>
 <head>
     <title>Foo</title>
+    <style>
+      a {color: #ddd}
+    </style>
 </head>
-<body>
+<body style="background: #1c1d21; color: ddd;">
     <div id="app"><%= html %></div>
     <script src="static/vendor.bundle.js"></script>
     <script src="static/app.bundle.js"></script>
