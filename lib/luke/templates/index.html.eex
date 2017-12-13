@@ -2,10 +2,10 @@
 <head>
     <title>Foo</title>
     <style>
-      a {color: #ddd}
+      a, body {color: #ddd;}
     </style>
 </head>
-<body style="background: #1c1d21; color: ddd;">
+<body style="background: #1c1d21;">
     <div id="app"><%= html %></div>
     <script src="static/vendor.bundle.js"></script>
     <script src="static/app.bundle.js"></script>

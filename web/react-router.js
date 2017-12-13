@@ -1,10 +1,14 @@
-const { createElement: h } = require('react/cjs/react.production.min')
+const React = require('react')
 const { StaticRouter } = require('react-router')
 const App = require('./static/App.js')
 
 const context = {}
 
-const Router = ({ location }) => h(StaticRouter, { location, context }, h(App, { context }))
+const Router = ({ location }) => (
+  <StaticRouter location={location} context={context}>
+    <App />
+  </StaticRouter>
+)
 
 Router.context = context
 module.exports = Router

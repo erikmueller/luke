@@ -1,6 +1,11 @@
+const React = require('react')
 const { hydrate } = require('react-dom')
 const { BrowserRouter } = require('react-router-dom')
-const { createElement: h } = require('react')
-const App = require('./App.js')
+const App = require('./App')
 
-hydrate(h(BrowserRouter, null, App({})), document.getElementById('app'))
+hydrate(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById('app')
+)
