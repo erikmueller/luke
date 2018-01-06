@@ -5,6 +5,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const plugins = [
   new webpack.optimize.CommonsChunkPlugin({
     name: 'vendor',
+    minChunks: module => /node_modules/.test(module.resource),
   }),
 ]
 
@@ -13,10 +14,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 module.exports = {
-  entry: {
-    app: './web/static/main.js',
-    vendor: ['react-dom', 'react-router', 'react-router-dom', 'react'],
-  },
+  entry: './web/static/main.js',
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'priv', 'static'),
