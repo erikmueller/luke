@@ -19,9 +19,4 @@ defmodule Luke.Router do
   # forward requests to appropriate router (plug)
   forward "/api", to: Luke.ApiRouter
   forward "/", to: Luke.ReactRouter
-
-  # catch rest
-  match _ do
-    conn |> send_resp(404, "Not found")
-  end
 end

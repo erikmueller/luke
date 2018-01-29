@@ -7,9 +7,8 @@ defmodule Luke.ApiRouter do
   get "/" do
     conn |> send_resp(200, "soon to be api resp")
   end
-
-  # should be handled by the react router later
+ 
   match _ do
-    conn |> send_resp(404, "We should not have ended up here.")
+    conn |> send_resp(501, "Not implemented")
   end
 end
