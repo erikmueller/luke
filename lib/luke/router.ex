@@ -9,7 +9,7 @@ defmodule Luke.Router do
 
   # Log requests obviously
   plug Plug.Logger,
-    log: :debug
+    log: :info
 
   # To match a route and execute the appropriate handler we need
   # invoke the `:match` as well as the `dispatch` plug

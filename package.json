@@ -26,7 +26,7 @@
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-stdio": "erikmueller/react-stdio"
+    "react-stdio": "^3.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -37,5 +37,11 @@
     "reveal-md": "^1.1.1",
     "uglifyjs-webpack-plugin": "^1.1.2",
     "webpack": "^3.9.1"
+  },
+  "optionalDependencies": {
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "serve-static": "^1.13.1",
+    "shrink-ray": "^0.1.3"
   }
 }
