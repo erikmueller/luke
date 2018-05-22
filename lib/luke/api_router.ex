@@ -4,11 +4,7 @@ defmodule Luke.ApiRouter do
   plug :match
   plug :dispatch
 
-  get "/" do
-    conn |> send_resp(200, "soon to be api resp")
-  end
- 
   match _ do
-    conn |> send_resp(501, "Not implemented")
+    send_resp conn, 501, "Not implemented"
   end
 end

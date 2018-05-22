@@ -21,7 +21,6 @@ const template = html =>
 </head>
 <body style="background: #1c1d21;">
   <div id="app">${html}</div>
-   <script src="static/vendor.bundle.js"></script>
    <script src="static/main.bundle.js"></script>
 </body>
 </html>
