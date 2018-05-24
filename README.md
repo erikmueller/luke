@@ -8,7 +8,11 @@ All API calls are forwarded to the `ApiRouter` while the `ReactRouter` uses `rea
 
 # Running
 
-Make sure to run `mix deps.get` and `npm i` before running `iex -S mis` to start the application
+Make sure to run `mix deps.get` and `yarn` as well as `yarn build` before running `mix` to start the application.
+
+# Development
+
+You can run `yarn start` to have webpack recompile while you change files.
 
 # Resources
 
