@@ -1,25 +1,18 @@
-const React = require('react')
+const { createElement: h, Fragment } = require('react')
 const { Link } = require('react-router-dom')
 
-const content = new Array(100).fill().map((_item, idx) => (
-  <ul key={idx}>
-    <li>
-      <Link to="/a">to A</Link>
-    </li>
-    <li>
-      <Link to="/b">to B</Link>
-    </li>
-    <li>
-      <Link to="/c">somewhere else</Link>
-    </li>
-  </ul>
-))
+const content = new Array(100)
+  .fill()
+  .map((_item, key) =>
+    h(
+      'ul',
+      { key },
+      h('li', null, h(Link, { to: '/a' }, 'to A')),
+      h('li', null, h(Link, { to: '/b' }, 'to B')),
+      h('li', null, h(Link, { to: '/c' }, 'Somewhere else'))
+    )
+  )
 
-const Home = () => (
-  <div>
-    <h1>::1, sweet ::1</h1>
-    {content}
-  </div>
-)
+const Home = () => h(Fragment, null, h('h1', null, '::1, sweet ::1'), content)
 
 module.exports = Home

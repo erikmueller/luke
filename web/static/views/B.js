@@ -1,11 +1,6 @@
-const React = require('react')
+const { createElement: h, Fragment } = require('react')
 const { Link } = require('react-router-dom')
 
-const B = () => (
-  <div>
-    <h2>This is B</h2>
-    <Link to="/a">to A</Link>
-  </div>
-)
+const B = () => h(Fragment, null, h('h2', null, 'This is B'), h(Link, { to: '/a' }, 'to A'))
 
 module.exports = B

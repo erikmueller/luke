@@ -7,7 +7,8 @@ defmodule Luke.Mixfile do
       version: "0.1.0",
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
-      deps: deps()
+      deps: deps(),
+      default_task: "luke.server"
     ]
   end
 
@@ -25,8 +26,6 @@ defmodule Luke.Mixfile do
       {:cowboy, "~> 1.0.4"},
       {:plug, "~> 1.4.3"},
       {:std_json_io, git: "https://github.com/chvanikoff/std_json_io", branch: "refactoring"},
-      {:postgrex, ">= 0.0.0"},
-      {:ecto, "~> 2.1"}
     ]
   end
 end

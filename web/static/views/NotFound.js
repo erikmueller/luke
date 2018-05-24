@@ -1,9 +1,9 @@
-const React = require('react')
+const { createElement: h } = require('react')
 
 const NotFound = ({ staticContext = {} }) => {
   staticContext.status = 404
 
-  return <h3>Sorry, we took a wrong turn.</h3>
+  return h('h3', null, 'Sorry, we took a wrong turn.')
 }
 
 module.exports = NotFound

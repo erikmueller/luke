@@ -8,10 +8,9 @@ defmodule Luke.Router do
     brotli: true
 
   # Log requests obviously
-  plug Plug.Logger,
-    log: :info
+  plug Plug.Logger
 
-  # To match a route and execute the appropriate handler we need
+  # To match a route and execute the appropriate handler we need to
   # invoke the `:match` as well as the `dispatch` plug
   plug :match
   plug :dispatch
