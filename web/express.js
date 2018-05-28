@@ -1,11 +1,11 @@
-import path from 'path'
-import express from 'express'
-import serveStatic from 'serve-static'
-import shrinkray from 'shrink-ray'
-import ReactDOM from 'react-dom/server'
-import morgan from 'morgan'
+const path = require('path')
+const express = require('express')
+const serveStatic = require('serve-static')
+const shrinkray = require('shrink-ray')
+const ReactDOM = require('react-dom/server')
+const morgan = require('morgan')
 
-import reactRouter from './react-router'
+const reactRouter = require('./react-router')
 
 const app = express()
 const apiRouter = express.Router().get('/', (req, res, next) => res.status(501).send('Not implemented'))
