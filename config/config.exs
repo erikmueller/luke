@@ -23,8 +23,8 @@ use Mix.Config
 config :porcelain, driver: Porcelain.Driver.Basic
 
 config :std_json_io,
-  pool_size: 5,
-  pool_max_overflow: 10,
+  pool_size: 2,
+  pool_max_overflow: 4,
   script: "node_modules/.bin/react-stdio"
 
 # It is also possible to import configuration files, relative to this
